@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+body, html {
+  overflow: hidden;
+  height: 100%;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+
+.cormorant-garamond{
+  font-family: "Cormorant Garamond", serif;
+}
+
+.tenor-sans-regular {
+  font-family: "Tenor Sans", sans-serif;
+}
+
+.semicircle {
+  width: 760px;
+  height: 380px;
+  background: radial-gradient(ellipse at center, #47A476 0%, #003F20 100%);
+  clip-path: ellipse(50% 100% at 50% 100%);
+}
+
+.circlestroke {
+  width: 846px;
+  height: 423px;
+  position: relative;
+}
+
+.circlestroke svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
