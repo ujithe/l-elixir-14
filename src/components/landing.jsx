@@ -148,16 +148,10 @@ const Landing = () => {
                         </svg>
                     </div>
                 </div>
-
                 <div className='w-[1000px] h-[1000px] absolute bottom-[-350px] left-1/2 transform -translate-x-1/2 rotate-[-15deg] flex items-center justify-center z-10'>
                     <img src={greenBottle} alt="Green Bottle" />
                 </div>
             </div>
-
-
-
-
-
         </div>
     )
 }

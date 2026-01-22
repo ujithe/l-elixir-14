@@ -35,7 +35,7 @@ const App = () => {
         <Landing />
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
