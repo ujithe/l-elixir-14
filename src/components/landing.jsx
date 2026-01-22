@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap';
 import Navbar from './navbar';
 import PromoBadge from './PromoBadge';
@@ -6,6 +6,7 @@ import greenBottle from '../assests/Green bottle.png';
 import Arrow from '../assests/arrow.png';
 
 const Landing = () => {
+    const [isHovered, setIsHovered] = useState(false);
     const navbarRef = useRef(null);
 
     useEffect(() => {
@@ -80,7 +81,12 @@ const Landing = () => {
                     opacity: 1,
                     duration: 1,
                     delay: 0.7,
-                    ease: 'power3.out'
+                    ease: 'power3.out',
+                    onStart: () => {
+                        if (promotionRef.current) {
+                            promotionRef.current.style.pointerEvents = 'auto';
+                        }
+                    }
                 }
             );
         }
@@ -123,7 +129,7 @@ const Landing = () => {
             <div ref={promotionRef}>
                 <PromoBadge text="25% OFF" />
 
-                <div className='shop-button w-[275px] h-[75px] px-[30px] py-[20px] bg-black rounded-full flex items-center justify-center absolute top-[200px] left-[1170px] hover:cursor-pointer'>
+                <div className='shop-button w-[260px] h-[70px] px-[30px] py-[20px] bg-black rounded-full flex items-center justify-center absolute top-[200px] left-[1170px] hover:cursor-pointer'>
                     <div className='flex flex-row gap-5 items-center justify-center tenor-sans-regular text-white text-[32px] relative z-10'>
                         Shop Now <span> <img src={Arrow} alt="Arrow" className='w-[25px] h-[25px]' /></span>
                     </div>
